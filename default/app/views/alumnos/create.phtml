@@ -1,0 +1,26 @@
+<h3>Registro de Estudiantes</h3>
+<div class="card-panel green lighten-5">
+    <?php View::content() ;?>
+</div>
+<?php echo Form::open() ; ?>
+    <div class="row">
+        <div class="col s6">
+            <label for="Nombres">Nombres
+            <?php echo Form::text('alumnos.nombres','placeholder="Ej. Juan Carlos"'); ?></label>
+        </div>
+        <div class="col s6">
+            <label for="Apellidos">Apellidos
+            <?php echo Form::text('alumnos.apellidos','placeholder="Ej. Morales Perez"'); ?></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6">
+            <label for="Telefono">telefono
+                <?php echo Form::text('alumnos.telefono', 'placeholder="ej. 75442244"'); ?>
+            </label>
+        </div>
+        <div class="col s6">
+            <?php echo Form::submit('Guardar', 'class="btn green"'); ?>
+        </div>
+    </div>
+<?php echo Form::close(); ?>
